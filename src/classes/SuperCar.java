@@ -33,5 +33,10 @@ public class SuperCar extends PassengerCar {
             throw new IllegalArgumentException();
     }
 
-
+    @Override
+    public String showInfo() {
+        String info = super.showInfo();
+        info += ", edition size = " + limitedEditionSize + ", serial number = " + serialNum;
+        return info;
+    }
 }

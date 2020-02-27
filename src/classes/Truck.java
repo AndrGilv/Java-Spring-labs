@@ -3,10 +3,12 @@ package classes;
 public class Truck extends Car {
 
     private int payLoad; // грузоподъемность
-    private int volume; // полезный объем
+    private double volume; // полезный объем
 
-    public Truck(String name, int numberOfSeats, String transmission) {
+    public Truck(String name, int numberOfSeats, String transmission, int payLoad, double volume) {
         super(name, "Грузовой транспорт", numberOfSeats, transmission);
+        this.volume = volume;
+        this.payLoad = payLoad;
     }
 
     public Truck() {
@@ -25,7 +27,7 @@ public class Truck extends Car {
             throw new IllegalArgumentException();
     }
 
-    public int getVolume() {
+    public double getVolume() {
         return volume;
     }
 
@@ -37,5 +39,10 @@ public class Truck extends Car {
             throw new IllegalArgumentException();
     }
 
-
+    @Override
+    public String showInfo() {
+        String info = super.showInfo();
+        info += ", pay load = " + payLoad + ", volume = " + volume;
+        return info;
+    }
 }

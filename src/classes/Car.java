@@ -23,4 +23,12 @@ public class Car extends Transport {
 
         this.transmission = transmission;
     }
+
+    @Override
+    public String showInfo() {
+        String info = super.showInfo();
+        info += ", transmission = " + transmission;
+        return info;
+
+    }
 }

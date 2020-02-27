@@ -41,4 +41,11 @@ public class PassengerCar extends Car {
     public void setDoorsNum(int doorsNum) {
         this.doorsNum = doorsNum;
     }
+
+    @Override
+    public String showInfo() {
+        String info = super.showInfo();
+        info += ", form factor = " + formFactor + ", subtype = " + subtype + ", number of doors = " + doorsNum;
+        return info;
+    }
 }

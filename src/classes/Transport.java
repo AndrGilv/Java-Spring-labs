@@ -1,6 +1,6 @@
 package classes;
 
-public class Transport {
+public abstract class Transport {
     private String kind; // машины, самолёты ...
     private String name;
     private String type; // грузовые или легковые авто
@@ -45,6 +45,12 @@ public class Transport {
 
     public String getType() {
         return type;
+    }
+
+    public String showInfo(){
+        String info = "";
+        info += "Type: " + this.getClass() + ", kind = " + kind + ", name = " + name + ", type = " + type + ", number of sits = " + numberOfSeats;
+        return info;
     }
 
 }
