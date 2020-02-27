@@ -7,10 +7,6 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 public class Main {
 
-
-
-
-
     public static void main(String[] args) {
         //ArrayList<Transport> transports = new ArrayList<>();
         /*
@@ -37,7 +33,7 @@ public class Main {
                 transports.removeTransport();
             }
         };
-        for(int i = 0; i < 4; i++){
+        for(int i = 0; i < 2; i++){
             (new Thread(producer)).start();
             (new Thread(consumer)).start();
         }
