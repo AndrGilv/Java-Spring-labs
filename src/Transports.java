@@ -1,6 +1,7 @@
-import classes.Transport;
+import classes.*;
 
 import java.util.ArrayList;
+import java.util.Random;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class Transports {
@@ -43,5 +44,30 @@ public class Transports {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+    }
+
+    public static Transport produceRandTransport(){
+        Random rand = new Random();
+        Transport transport = null;
+        int switcher = rand.nextInt(4);
+        switch (switcher){
+            case 0:
+                transport = new PassengerCar("GT86", 2, "задний", "купе", "спорт", 2);
+                transport.setCost(3_000_000);
+                break;
+            case 1:
+                transport = new SuperCar("aventodor", "полный привод", "среднемоторное купе", 2);
+                transport.setCost(9_000_000);
+                break;
+            case 2:
+                transport = new PassengerCar("model 3", 5, "полный привод", "хетчбек", "stok", 5);
+                transport.setCost(6_000_000);
+                break;
+            case 3:
+                transport = new Truck("Камаз", 2, "задний", 3000, 3);
+                transport.setCost(3_000_000);
+                break;
+        }
+        return transport;
     }
 }

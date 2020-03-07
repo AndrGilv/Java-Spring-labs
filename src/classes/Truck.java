@@ -6,13 +6,16 @@ public class Truck extends Car {
     private double volume; // полезный объем
 
     public Truck(String name, int numberOfSeats, String transmission, int payLoad, double volume) {
-        super(name, "Грузовой транспорт", numberOfSeats, transmission);
+        this.name = name;
+        this.type = "Грузовой транспорт";
+        this.numberOfSeats = numberOfSeats;
+        this.transmission = transmission;
         this.volume = volume;
         this.payLoad = payLoad;
     }
 
-    public Truck() {
-        super("Грузовой транспорт");
+    public void setVolume(double volume) {
+        this.volume = volume;
     }
 
     public int getPayLoad() {

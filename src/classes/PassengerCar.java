@@ -6,21 +6,13 @@ public class PassengerCar extends Car {
     private String subtype; // спорт, лонг ...
     private int doorsNum;
 
-    public PassengerCar(String formFactor, String subtype) {
-        super("Посожирский транспорт");
-        this.formFactor = formFactor;
-        this.subtype = subtype;
-    }
 
-    public PassengerCar(String formFactor, String subtype, int doorsNum) {
-        super("Посожирский транспорт");
-        this.formFactor = formFactor;
-        this.subtype = subtype;
-        this.doorsNum = doorsNum;
-    }
 
     public PassengerCar(String name, int numberOfSeats, String transmission, String formFactor, String subtype, int doorsNum) {
-        super(name, "Посожирский транспорт", numberOfSeats, transmission);
+        this.name = name;
+        this.type = "Пасажирский транспорт";
+        this.numberOfSeats = numberOfSeats;
+        this.transmission = transmission;
         this.formFactor = formFactor;
         this.subtype = subtype;
         this.doorsNum = doorsNum;

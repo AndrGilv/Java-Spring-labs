@@ -1,17 +1,11 @@
 package classes;
 
-public class Car extends Transport {
+public abstract class Car extends Transport {
 
-    private String transmission;// задний, передний, полный привод
+    protected String transmission;// задний, передний, полный привод
 
-    public Car(String name, String type, int numberOfSeats, String transmission) {
-        super("Автомобиль", name, type, numberOfSeats);
-        this.transmission = transmission;
-    }
-
-    public Car(String type) {
-        super("Автомобиль", type);
-
+    public Car(){
+        this.kind = "Car";
     }
 
     public String getTransmission() {
@@ -31,4 +25,5 @@ public class Car extends Transport {
         return info;
 
     }
+
 }

@@ -1,21 +1,21 @@
 package classes;
 
 public abstract class Transport {
-    private String kind; // машины, самолёты ...
-    private String name;
-    private String type; // грузовые или легковые авто
-    private int numberOfSeats;
+    protected String kind; // машины, самолёты ...
+    protected String name;
+    protected String type; // грузовые или легковые авто
+    protected int numberOfSeats;
+    protected int cost;
 
-    public Transport(String kind, String type) {
+
+
+
+    public void setKind(String kind) {
         this.kind = kind;
-        this.type = type;
     }
 
-    public Transport(String kind, String name, String type, int numberOfSeats) {
-        this.kind = kind;
-        this.name = name;
+    public void setType(String type) {
         this.type = type;
-        this.numberOfSeats = numberOfSeats;
     }
 
     public String getKind() {
@@ -49,8 +49,17 @@ public abstract class Transport {
 
     public String showInfo(){
         String info = "";
-        info += "Type: " + this.getClass() + ", kind = " + kind + ", name = " + name + ", type = " + type + ", number of sits = " + numberOfSeats;
+        info += "Type: " + type + ", kind = " + kind + ", name = " + name + ", type = " + type + ", number of sits = " + numberOfSeats;
         return info;
     }
+
+    public int getCost() {
+        return cost;
+    }
+
+    public void setCost(int cost) {
+        this.cost = cost;
+    }
+
 
 }
