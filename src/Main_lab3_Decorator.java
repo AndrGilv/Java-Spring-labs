@@ -21,6 +21,9 @@ public class Main_lab3_Decorator {
         System.out.println(car.showInfo());
         car = ((Decorator)car).getCar();
         System.out.println(car.showInfo());
+        car = ((Decorator)car).getCar();
+        System.out.println(car.showInfo());
+
     }
 
 

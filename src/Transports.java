@@ -11,38 +11,30 @@ public class Transports {
 
 
     public synchronized  void addTransport(Transport transport) {
-        try {
-            if(curFullness.get() < CAPACITY){
-                notifyAll();
-                transports.add(transport);
-                curFullness.incrementAndGet();
-                System.out.println(Thread.currentThread().getName() + ", add, current fullness: " + curFullness);
-            }
-            else
-            {
-                System.out.println(Thread.currentThread().getName() + ", can't add, current fullness: " + curFullness);
-                wait();
-            }
-        } catch (InterruptedException e) {
-            e.printStackTrace();
+        if(curFullness.get() < CAPACITY){
+            //notifyAll();
+            transports.add(transport);
+            curFullness.incrementAndGet();
+            System.out.println(Thread.currentThread().getName() + ", add, current fullness: " + curFullness);
+        }
+        else
+        {
+            System.out.println(Thread.currentThread().getName() + ", can't add, current fullness: " + curFullness);
+            //wait();
         }
     }
 
     public synchronized void removeTransport(){
-        try {
-            if(curFullness.get() > 0){
-                notifyAll();
-                transports.remove(0);
-                curFullness.decrementAndGet();
-                System.out.println(Thread.currentThread().getName() + ", remove, current fullness: " + curFullness);
-            }
-            else
-            {
-                System.out.println(Thread.currentThread().getName() + ", can't remove, current fullness: " + curFullness);
-                wait();
-            }
-        } catch (InterruptedException e) {
-            e.printStackTrace();
+        if(curFullness.get() > 0){
+            //notifyAll();
+            transports.remove(0);
+            curFullness.decrementAndGet();
+            System.out.println(Thread.currentThread().getName() + ", remove, current fullness: " + curFullness);
+        }
+        else
+        {
+            System.out.println(Thread.currentThread().getName() + ", can't remove, current fullness: " + curFullness);
+            //wait();
         }
     }
 
