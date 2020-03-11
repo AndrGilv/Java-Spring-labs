@@ -1,8 +1,9 @@
 package classes.Decorations;
 
 import classes.Car;
+import classes.Decorator;
 
-public class LeatherInterior extends Car {
+public class LeatherInterior extends Decorator {
     Car car;
     public LeatherInterior(Car car){
         this.car = car;

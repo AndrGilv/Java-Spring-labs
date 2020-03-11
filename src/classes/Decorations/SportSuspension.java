@@ -1,8 +1,9 @@
 package classes.Decorations;
 
 import classes.Car;
+import classes.Decorator;
 
-public class SportSuspension extends Car{
+public class SportSuspension extends Decorator {
     Car car;
     public SportSuspension(Car car){
         this.car = car;
