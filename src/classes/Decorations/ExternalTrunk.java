@@ -4,7 +4,7 @@ import classes.Car;
 import classes.Decorator;
 
 public class ExternalTrunk extends Decorator {
-    Car car;
+
     public ExternalTrunk(Car car){
         this.car = car;
     }

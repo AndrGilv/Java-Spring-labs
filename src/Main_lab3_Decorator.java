@@ -14,10 +14,13 @@ public class Main_lab3_Decorator {
         System.out.println(car.showInfo());
         car = new LeatherInterior(car);
         System.out.println(car.showInfo());
+
         car = new SportSuspension(car);
         System.out.println(car.showInfo());
-
-
+        car = ((Decorator)car).getCar();
+        System.out.println(car.showInfo());
+        car = ((Decorator)car).getCar();
+        System.out.println(car.showInfo());
     }
 
 

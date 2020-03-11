@@ -4,7 +4,7 @@ import classes.Car;
 import classes.Decorator;
 
 public class LeatherInterior extends Decorator {
-    Car car;
+
     public LeatherInterior(Car car){
         this.car = car;
     }

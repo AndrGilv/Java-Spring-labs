@@ -4,7 +4,7 @@ import classes.Car;
 import classes.Decorator;
 
 public class SportSuspension extends Decorator {
-    Car car;
+
     public SportSuspension(Car car){
         this.car = car;
     }
@@ -17,7 +17,5 @@ public class SportSuspension extends Decorator {
         return 100_000 + car.getCost();
     }
 
-    public Car getCar(){
-        return car;
-    }
+
 }
