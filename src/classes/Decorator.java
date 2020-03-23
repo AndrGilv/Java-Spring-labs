@@ -11,6 +11,7 @@ public abstract class Decorator extends Car {
     public Car getCar(){
         return  car;
     }
-
+    @Override
+    public void assembleCar() {}
 
 }

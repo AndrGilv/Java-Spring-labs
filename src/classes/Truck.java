@@ -1,5 +1,7 @@
 package classes;
 
+import classes.AbstractFactory.IngredientFactory.IngredientFactory;
+
 public class Truck extends Car {
 
     private int payLoad; // грузоподъемность
@@ -12,6 +14,10 @@ public class Truck extends Car {
         this.transmission = transmission;
         this.volume = volume;
         this.payLoad = payLoad;
+    }
+
+    public Truck(IngredientFactory ingredientFactory){
+        super(ingredientFactory);
     }
 
     public void setVolume(double volume) {
@@ -47,5 +53,16 @@ public class Truck extends Car {
         String info = super.showInfo();
         info += ", pay load = " + payLoad + ", volume = " + volume;
         return info;
+    }
+
+    @Override
+    public void assembleCar() {
+        name = "Truck";
+        type = "Грузовой транспорт";
+        numberOfSeats = 2;
+        transmission = ingredientFactory.assembleTransmission();
+        engine = ingredientFactory.assembleEngine();
+        volume = 2000;
+        payLoad = 2000;
     }
 }

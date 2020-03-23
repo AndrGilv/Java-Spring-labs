@@ -1,5 +1,7 @@
 package classes;
 
+import classes.AbstractFactory.IngredientFactory.IngredientFactory;
+
 public class SuperCar extends PassengerCar {
 
     private int limitedEditionSize;
@@ -9,6 +11,9 @@ public class SuperCar extends PassengerCar {
         super(name, 2, transmission, "Родстер", subtype, doorsNum);
     }
 
+    public SuperCar(IngredientFactory ingredientFactory){
+        super(ingredientFactory);
+    }
     public int getLimitedEditionSize() {
         return limitedEditionSize;
     }
@@ -39,4 +44,6 @@ public class SuperCar extends PassengerCar {
         info += ", edition size = " + limitedEditionSize + ", serial number = " + serialNum;
         return info;
     }
+
+
 }
