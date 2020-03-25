@@ -1,8 +1,7 @@
-package classes;
-
 import classes.AbstractFactory.AbstractFactory;
 import classes.AbstractFactory.MercedesFactory;
 import classes.AbstractFactory.ToyotaFactory;
+import classes.Car;
 import classes.Factory.CarFactory;
 import classes.Factory.MercedesCarFactory;
 import classes.Factory.ToyotaCarFactory;
