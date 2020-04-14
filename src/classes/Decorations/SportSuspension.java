@@ -9,8 +9,8 @@ public class SportSuspension extends Decorator {
         this.car = car;
     }
 
-    public String showInfo(){
-        return car.showInfo() + " + Спортивная подвеска";
+    public String getInfoString(){
+        return car.getInfoString() + " + Спортивная подвеска";
     }
 
 

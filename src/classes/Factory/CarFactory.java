@@ -7,7 +7,7 @@ public abstract class CarFactory {
 
     public Car orderCar(String carName){
         Car car = createCar(carName);
-        System.out.println("Выбранный автомобиль: " + car.showInfo());
+        System.out.println("Выбранный автомобиль: " + car.getInfoString());
 
         return car;
     }

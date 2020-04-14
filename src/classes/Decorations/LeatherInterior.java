@@ -9,8 +9,8 @@ public class LeatherInterior extends Decorator {
         this.car = car;
     }
 
-    public String showInfo(){
-        return car.showInfo() + " + Кожаный салон";
+    public String getInfoString(){
+        return car.getInfoString() + " + Кожаный салон";
     }
 
     public int getCost(){

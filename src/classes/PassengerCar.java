@@ -4,9 +4,13 @@ import classes.AbstractFactory.IngredientFactory.IngredientFactory;
 
 public class PassengerCar extends Car {
 
-    private String formFactor; // седан, купе ...
-    private String subtype; // спорт, лонг ...
-    private int doorsNum;
+    protected String formFactor = "-"; // седан, купе ...
+    protected String subtype = "-"; // спорт, лонг ...
+    protected int doorsNum = -1;
+
+    public PassengerCar(){
+
+    }
 
     public PassengerCar(IngredientFactory ingredientFactory){
         super(ingredientFactory);
@@ -39,8 +43,8 @@ public class PassengerCar extends Car {
     }
 
     @Override
-    public String showInfo() {
-        String info = super.showInfo();
+    public String getInfoString() {
+        String info = super.getInfoString();
         info += ", form factor = " + formFactor + ", subtype = " + subtype + ", number of doors = " + doorsNum;
         return info;
     }

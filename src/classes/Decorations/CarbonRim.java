@@ -9,8 +9,8 @@ public class CarbonRim extends Decorator {
         this.car = car;
     }
 
-    public String showInfo(){
-        return car.showInfo() + " + Карбоновые диски";
+    public String getInfoString(){
+        return car.getInfoString() + " + Карбоновые диски";
     }
 
     public int getCost(){

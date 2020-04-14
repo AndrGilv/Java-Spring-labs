@@ -4,8 +4,8 @@ import classes.AbstractFactory.IngredientFactory.IngredientFactory;
 
 public class Truck extends Car {
 
-    private int payLoad; // грузоподъемность
-    private double volume; // полезный объем
+    protected int payLoad; // грузоподъемность
+    protected double volume; // полезный объем
 
     public Truck(String name, int numberOfSeats, String transmission, int payLoad, double volume) {
         this.name = name;
@@ -49,8 +49,8 @@ public class Truck extends Car {
     }
 
     @Override
-    public String showInfo() {
-        String info = super.showInfo();
+    public String getInfoString() {
+        String info = super.getInfoString();
         info += ", pay load = " + payLoad + ", volume = " + volume;
         return info;
     }

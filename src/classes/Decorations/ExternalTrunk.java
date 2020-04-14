@@ -9,8 +9,8 @@ public class ExternalTrunk extends Decorator {
         this.car = car;
     }
 
-    public String showInfo(){
-        return car.showInfo() + " + Внешний багажник";
+    public String getInfoString(){
+        return car.getInfoString() + " + Внешний багажник";
     }
 
     public int getCost(){

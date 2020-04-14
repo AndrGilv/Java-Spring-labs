@@ -1,6 +1,5 @@
 package classes.AbstractFactory;
 
-import classes.AbstractFactory.IngredientFactory.IngredientFactory;
 import classes.Car;
 
 public abstract class AbstractFactory {
@@ -11,7 +10,7 @@ public abstract class AbstractFactory {
     public Car orderCar(String carName){
         Car car = createCar(carName);
         car.assembleCar();
-        System.out.println("Выбранный автомобиль: " + car.showInfo());
+        System.out.println("Выбранный автомобиль: " + car.getInfoString());
 
         return car;
     }

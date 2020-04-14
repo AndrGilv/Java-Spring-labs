@@ -1,9 +1,6 @@
 import classes.*;
 
 import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
-import java.util.concurrent.atomic.AtomicInteger;
 
 public class Main {
 
@@ -17,7 +14,7 @@ public class Main {
         }
 
         for(Transport tr : transports){
-            System.out.println(tr.showInfo());
+            System.out.println(tr.getInfoString());
         }
 
 

@@ -1,14 +1,11 @@
 package classes;
 
 public abstract class Transport {
-    protected String kind; // машины, самолёты ...
-    protected String name;
-    protected String type; // грузовые или легковые авто
-    protected int numberOfSeats;
-    protected int cost;
-
-
-
+    protected String kind = "-"; // машины, самолёты ...
+    protected String name = "-";
+    protected String type = "-"; // грузовые или легковые авто
+    protected int numberOfSeats = -1;
+    protected int cost = -1;
 
     public void setKind(String kind) {
         this.kind = kind;
@@ -47,7 +44,7 @@ public abstract class Transport {
         return type;
     }
 
-    public String showInfo(){
+    public String getInfoString(){
         String info = "";
         info += "Type: " + type + ", kind = " + kind + ", name = " + name + ", type = " + type + ", number of sits = " + numberOfSeats;
         return info;

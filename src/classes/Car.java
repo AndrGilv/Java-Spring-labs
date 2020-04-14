@@ -4,9 +4,9 @@ import classes.AbstractFactory.IngredientFactory.IngredientFactory;
 
 public abstract class Car extends Transport {
 
-    protected IngredientFactory ingredientFactory;
-    protected String engine;
-    protected String transmission;// задний, передний, полный привод
+    protected IngredientFactory ingredientFactory = null;
+    protected String engine = "-";
+    protected String transmission = "-";// задний, передний, полный привод
 
     public Car(){
         this.kind = "Car";
@@ -30,8 +30,8 @@ public abstract class Car extends Transport {
     }
 
     @Override
-    public String showInfo() {
-        String info = super.showInfo();
+    public String getInfoString() {
+        String info = super.getInfoString();
         info += ", transmission = " + transmission + ", engine = " + engine;
         return info;
 
