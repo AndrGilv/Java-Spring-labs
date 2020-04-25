@@ -1,0 +1,49 @@
+# Created by .ignore support plugin (hsz.mobi)
+### Java template
+# Compiled class file
+*.class
+
+# Log file
+*.log
+
+# BlueJ files
+*.ctxt
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+
+.idea/.gitignore
+.idea/description.html
+.idea/encodings.xml
+.idea/libraries/
+.idea/misc.xml
+.idea/modules.xml
+.idea/project-template.xml
+.idea/uiDesigner.xml
+.idea/vcs.xml
+JAVA-SPRING Р»Р°Р±С‹.iml
+lib/
+out/production/JAVA-SPRING Р»Р°Р±С‹/META-INF/
+out/production/JAVA-SPRING Р»Р°Р±С‹/Main_Lab8_Builder.class
+out/production/JAVA-SPRING Р»Р°Р±С‹/Main_lab2_Threads.class
+out/production/JAVA-SPRING Р»Р°Р±С‹/Main_lab3_Decorator.class
+out/production/JAVA-SPRING Р»Р°Р±С‹/Main_lab4_Factory.class
+out/production/JAVA-SPRING Р»Р°Р±С‹/Main_lab5_RegEx.class
+out/production/JAVA-SPRING Р»Р°Р±С‹/Main_lab6_AbstractFactory.class
+out/production/JAVA-SPRING Р»Р°Р±С‹/classes/AbstractFactory/
+out/production/JAVA-SPRING Р»Р°Р±С‹/classes/Decorations/
+out/production/JAVA-SPRING Р»Р°Р±С‹/classes/Decorator.class
+out/production/JAVA-SPRING Р»Р°Р±С‹/classes/Factory/
+out/production/JAVA-SPRING Р»Р°Р±С‹/classes/SuperCar$Builder.class
